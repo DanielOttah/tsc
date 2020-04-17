@@ -1121,6 +1121,16 @@ If you having trouble in editing css, see documentation or please email me on su
         padding-bottom: 20px;
     }
     
+    .keyWord {
+        display: block;
+        /* grid-template-columns: 3fr 1fr; */
+    }
+    
+    .keyWord input[type=text] {
+        margin: 0;
+        border: 1px solid #ccc;
+    }
+    
     .subpage-head h3 {
         color: #53504c;
     }
