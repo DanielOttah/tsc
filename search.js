@@ -128,6 +128,8 @@ const createLiList = (msgTitle, listenLink, downloadLink, listenImg, downloadImg
 
 }
 const loadMessages = () => {
+    console.log("seeing load msg");
+
     for (let i = 0; i < allMessages.length; i++) {
         messageList.appendChild(createLiList(
             allMessages[i].title,
