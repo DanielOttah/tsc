@@ -1129,6 +1129,16 @@ If you having trouble in editing css, see documentation or please email me on su
     .keyWord input[type=text] {
         margin: 0;
         border: 1px solid #ccc;
+        height: 30px;
+    }
+    
+    .keyWordbutton {
+        height: 30px;
+        width: 35px;
+    }
+    
+    .keyWord button:hover {
+        background: rgb(224, 214, 169);
     }
     
     .subpage-head h3 {
