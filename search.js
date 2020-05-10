@@ -79,10 +79,52 @@ let allMessages = [
     },
     {
         title: "Vitalizing Your Faith",
-        listen: "https://drive.google.com/file/d/1crnfvLkOD260E3JjSh4nkI5DBaPPKnPb/preview?usp=sharing",
+        listen: "https://drive.google.com/file/d/1crnfvLkOD260E3JjSh4nkI5DBaPPKnPb/view?usp=sharing",
         download: "https://drive.google.com/uc?export=download&id=1crnfvLkOD260E3JjSh4nkI5DBaPPKnPb",
 
     },
+    {
+        title: "Provoking Divine Favour 1",
+        listen: "https://drive.google.com/file/d/1le_tExZocq9iOWpJOaoQC_Arafj4_3RA/view?usp=sharing",
+        download: "https://drive.google.com/uc?export=download&id=1le_tExZocq9iOWpJOaoQC_Arafj4_3RA",
+
+    },
+    {
+        title: "Provoking Divine Favour 2",
+        listen: "https://drive.google.com/file/d/177g9XDqSgePJuyjzao3CFAPmDhLd9xZi/view?usp=sharing",
+        download: "https://drive.google.com/uc?export=download&id=177g9XDqSgePJuyjzao3CFAPmDhLd9xZi",
+
+    },
+    {
+        title: "Provoking Divine Favour 3",
+        listen: "https://drive.google.com/file/d/1ZGyhtgTdvZzP9V90gga9MIusN9U2_jCR/view?usp=sharing",
+        download: "https://drive.google.com/uc?export=download&id=1ZGyhtgTdvZzP9V90gga9MIusN9U2_jCR",
+
+    },
+    {
+        title: "Receiving Under The Anointing of Your Prophet",
+        listen: "https://drive.google.com/file/d/1zOVWsyQHkPWI-1Eb6-IkzkqH0feo_J0W/view?usp=sharing",
+        download: "https://drive.google.com/uc?export=download&id=1zOVWsyQHkPWI-1Eb6-IkzkqH0feo_J0W",
+
+    },
+    {
+        title: "Understanding The Operations Of Favour",
+        listen: "https://drive.google.com/file/d/1APzZhVsknuT0r8Yd9dkXhDbrJbBB22dx/view?usp=sharing",
+        download: "https://drive.google.com/uc?export=download&id=1APzZhVsknuT0r8Yd9dkXhDbrJbBB22dx",
+
+    },
+    {
+        title: "Walking In Supernatural Favour",
+        listen: "https://drive.google.com/file/d/1zk0Tkop4hEDmOOxVo7KKYIRoPNnhHbyE/view?usp=sharing",
+        download: "https://drive.google.com/uc?export=download&id=1zk0Tkop4hEDmOOxVo7KKYIRoPNnhHbyE",
+
+    },
+    // {
+    //     title: "",
+    //     listen: "",
+    //     download: "https://drive.google.com/uc?export=download&id=",
+
+    // },
 ];
 const createLiList = (msgTitle, listenLink, downloadLink) => {
     let downloadImg = "assets/images/dl.png";
