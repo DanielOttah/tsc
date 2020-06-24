@@ -1,7 +1,8 @@
 const inputSearch = document.getElementById("inputSearch");
-btnSearch.addEventListener("click", searchForMessage);
+// btnSearch.addEventListener("click", searchForMessage);
 window.addEventListener('load', loadMessages);
-btnRefresh.addEventListener("click", loadMessages);
+// btnRefresh.addEventListener("click", loadMessages);
+inputSearch.addEventListener('keyup', filterMessage)
 
 
 let allMessages = [
@@ -119,13 +120,74 @@ let allMessages = [
         download: "https://drive.google.com/uc?export=download&id=1zk0Tkop4hEDmOOxVo7KKYIRoPNnhHbyE",
 
     },
-    // {
-    //     title: "",
-    //     listen: "",
-    //     download: "https://drive.google.com/uc?export=download&id=",
+    {
+        title: "Reigning Over Generational Curses 1",
+        listen: "https://drive.google.com/file/d/1lqTCFtVDHaQixSOOy6fHc7fYWIhUNmV1/view?usp=sharing",
+        download: "https://drive.google.com/uc?export=download&id=1lqTCFtVDHaQixSOOy6fHc7fYWIhUNmV1",
+    },
+    {
+        title: "Reigning Over Generational Curses 2",
+        listen: "https://drive.google.com/file/d/1XEEZqKPuSMizU8UHdrtPwg4BJV_QMXtZ/view?usp=sharing",
+        download: "https://drive.google.com/uc?export=download&id=1XEEZqKPuSMizU8UHdrtPwg4BJV_QMXtZ",
+    },
+    {
+        title: "Reigning Over Generational Curses 3",
+        listen: "https://drive.google.com/file/d/1MW0GZ23h3PhY8bxBQfxaTo9I-t37MUxC/view?usp=sharing",
+        download: "https://drive.google.com/uc?export=download&id=1MW0GZ23h3PhY8bxBQfxaTo9I-t37MUxC",
+    },
+    {
+        title: "3 Ways To Get Involved In The Gospel",
+        listen: "https://drive.google.com/file/d/18KwEWqU0XQ5FzIqHArXZ-RBo7c9GcRg_/view?usp=sharing",
+        download: "https://drive.google.com/uc?export=download&id=18KwEWqU0XQ5FzIqHArXZ-RBo7c9GcRg_",
+    },
+    {
+        title: "Four Kinds Of Tongues",
+        listen: "https://drive.google.com/file/d/1KuzgmE07TAuKK8VcsTAd2zSOWMlhtvhc/view?usp=sharing",
+        download: "https://drive.google.com/uc?export=download&id=1KuzgmE07TAuKK8VcsTAd2zSOWMlhtvhc",
+    },
+    {
+        title: "How To Win During Persecution",
+        listen: "https://drive.google.com/file/d/1SGIfkb2uOfItUWcm0Sc1cmAxKjfWGpUl/view?usp=sharing",
+        download: "https://drive.google.com/uc?export=download&id=1SGIfkb2uOfItUWcm0Sc1cmAxKjfWGpUl",
+    },
+    {
+        title: "Two Blessedness Of A Believer 1",
+        listen: "https://drive.google.com/file/d/16Wy80aErfaFl9tV3ShRMzWVGxKS6DrFB/view?usp=sharing",
+        download: "https://drive.google.com/uc?export=download&id=16Wy80aErfaFl9tV3ShRMzWVGxKS6DrFB",
+    },
+    {
+        title: "Two Blessedness Of A Believer 2",//
+        listen: "https://drive.google.com/file/d/1YY_fi2jnXTfCsfvmf_yIBQf11oNuvuFg/view?usp=sharing",
+        download: "https://drive.google.com/uc?export=download&id=1YY_fi2jnXTfCsfvmf_yIBQf11oNuvuFg",
+    },
 
-    // },
+    {
+        title: "Two Witnesses Of The Spirit",
+        listen: "https://drive.google.com/file/d/1qDXdtcWG56oI6I8FtuuIF1-fNQDRd2SW/view?usp=sharing",
+        download: "https://drive.google.com/uc?export=download&id=1qDXdtcWG56oI6I8FtuuIF1-fNQDRd2SW",
+    },
 ];
+
+function filterMessage() {
+    const filteredRobots = allMessages.filter(msg => {
+        return msg.title.toLowerCase().includes(inputSearch.value.toLowerCase());
+    })
+
+    let allmgs = messageList.firstElementChild;
+    while (allmgs) {
+        allmgs.remove();
+        allmgs = messageList.firstElementChild;
+    }
+
+    for (let i = 0; i < filteredRobots.length; i++) {
+        messageList.appendChild(createLiList(
+            filteredRobots[i].title,
+            filteredRobots[i].listen,
+            filteredRobots[i].download
+        ))
+    }
+
+}
 const createLiList = (msgTitle, listenLink, downloadLink) => {
     let downloadImg = "assets/images/dl.png";
     let listenImg = "assets/images/s3.png";
@@ -174,41 +236,41 @@ function loadMessages() {
         ))
     }
 }
-function searchForMessage() {
-    let filter = [];
-    let allmgs = messageList.firstElementChild;
-    let message = inputSearch.value.toLowerCase();
+// function searchForMessage() {
+//     let filter = [];
+//     let allmgs = messageList.firstElementChild;
+//     let message = inputSearch.value.toLowerCase();
 
-    while (allmgs) {
-        allmgs.remove();
-        allmgs = messageList.firstElementChild;
-    }
-    if (message == "") {
+//     while (allmgs) {
+//         allmgs.remove();
+//         allmgs = messageList.firstElementChild;
+//     }
+//     if (message == "") {
 
-    } else {
-        for (let i = 0; i < allMessages.length; i++) {
-            if (allMessages[i].title.toLowerCase().includes(message)) {
-                filter.push(i);
-            }
-        }
+//     } else {
+//         for (let i = 0; i < allMessages.length; i++) {
+//             if (allMessages[i].title.toLowerCase().includes(message)) {
+//                 filter.push(i);
+//             }
+//         }
 
-        if (filter.length == 0) {
-            let noLi = document.createElement("li");
-            noLi.appendChild(document.createTextNode("Sorry! No result. Try Using another query."))
-            messageList.appendChild(noLi);
-        }
-        else {
-            for (let i = 0; i < filter.length; i++) {
-                messageList.appendChild(createLiList(
-                    allMessages[filter[i]].title,
-                    allMessages[filter[i]].listen,
-                    allMessages[filter[i]].download
-                ))
-            }
-        }
+//         if (filter.length == 0) {
+//             let noLi = document.createElement("li");
+//             noLi.appendChild(document.createTextNode("Sorry! No result. Try Using another query."))
+//             messageList.appendChild(noLi);
+//         }
+//         else {
+//             for (let i = 0; i < filter.length; i++) {
+//                 messageList.appendChild(createLiList(
+//                     allMessages[filter[i]].title,
+//                     allMessages[filter[i]].listen,
+//                     allMessages[filter[i]].download
+//                 ))
+//             }
+//         }
 
-    }
+//     }
 
-}
+// }
 
 
